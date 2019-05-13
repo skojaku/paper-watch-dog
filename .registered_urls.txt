@@ -1,9 +1,3 @@
-http://arxiv.org/abs/1905.03919
-http://arxiv.org/abs/1905.04056
-http://arxiv.org/abs/1905.04102
-http://arxiv.org/abs/1905.04261
-http://arxiv.org/abs/1806.02627
-http://arxiv.org/abs/1809.09098
 https://epubs.siam.org/doi/abs/10.1137/18M120943X?af=R
 https://epubs.siam.org/doi/abs/10.1137/18M1216894?af=R
 https://epubs.siam.org/doi/abs/10.1137/18M1183698?af=R
@@ -366,3 +360,10 @@ https://www.nature.com/articles/s41598-019-43658-w
 https://www.nature.com/articles/s41598-019-43740-3
 https://www.nature.com/articles/s41598-019-43542-7
 https://www.nature.com/articles/s41598-019-43479-x
+
+http://arxiv.org/abs/1905.03919
+http://arxiv.org/abs/1905.04056
+http://arxiv.org/abs/1905.04102
+http://arxiv.org/abs/1905.04261
+http://arxiv.org/abs/1806.02627
+http://arxiv.org/abs/1809.09098
