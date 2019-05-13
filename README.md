@@ -30,7 +30,8 @@ crontab -e
 
 # How to add your favorite journals
 
-- You can add a journal by adding a dict object to `url_q_list` in line 24 in main.py.   
+- You can add a journal by adding a dict object to `url_q_list` in line 24 in main.py. 
+The dict object is composed of four pairs of a key and a value as follows: 
 
 ```python
 url_q_list = [
