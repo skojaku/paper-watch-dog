@@ -9,7 +9,7 @@ A slack bot for RSS feeds from academic journals
 
 # How to use it
 
-- Create your incoming Webhook in Slack from ![here](https://sada-papers.slack.com/apps/new/A0F7XDUAZ--incoming-webhook-)
+- Create your incoming Webhook in Slack from [here](https://sada-papers.slack.com/apps/new/A0F7XDUAZ--incoming-webhook-)
 - Copy Webhook URL and paste it in line 21 in main.py as follows:
 
 ```python 
