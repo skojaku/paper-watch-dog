@@ -2,7 +2,7 @@
 A slack bot for RSS feeds from academic journals
 ------------------------------------------------
 
-# A python program that retrieves feeds from journals and post to a slack channel.
+# A python program for collecting feeds from journals and posting to your slack channel.
 
 ![](https://raw.githubusercontent.com/skojaku/slack-rss-bot/master/image/slack.png) 
 
@@ -17,8 +17,8 @@ A slack bot for RSS feeds from academic journals
 WEBHOOK_URL = "https://hooks.slack.com/services/****************"
 ```
 
-- Delete all lines in .registered_urls.txt, in which each line indicates the url of a paper. 
-The program does not post the paper if already registered in this file, sending only new feeds to your slack channel.
+- Delete all lines in .registered_urls.txt, in which each line indicates the url of a paper.
+This program will first collect the update from journal websites. Then, it will send you only those that haven't been sent before. This file is to check if the paper has been sent or not.
 
 - Place the program to an appropriate place (me place ~/.cron/slack-rss/main.py). Then, set a crontab or other program that routinely runs it, e.g., 
 
