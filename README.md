@@ -1,59 +1,62 @@
 
-A slack bot for RSS feeds from academic journals
+A Watch Dog for academic papers in your slack channles 
 ------------------------------------------------
-
-# A python program for collecting feeds from journals and posting to your slack channel.
 
 ![](https://raw.githubusercontent.com/skojaku/slack-rss-bot/master/image/slack.png) 
 
 
 # How to use it
 
-- Create your incoming Webhook in Slack from [here](https://sada-papers.slack.com/apps/new/A0F7XDUAZ--incoming-webhook-)
-- Copy Webhook URL and paste it in line 21 in main.py as follows:
+- Create the Webhook URL from [here](https://api.slack.com/messaging/webhooks )
+- Open the example.py and paste the url to the `WEBHOOK_URL` variable:
 
 ```python 
 # slack webhook URL
 WEBHOOK_URL = "https://hooks.slack.com/services/****************"
 ```
 
-- Delete all lines in .registered_urls.txt, in which each line indicates the url of a paper.
-This program will first collect the update from journal websites. Then, it will send you only those that haven't been sent before. This file is to check if the paper has been sent or not.
+All done! Run the example.py.
 
-- Place the program to an appropriate place (me place ~/.cron/slack-rss/main.py). Then, set a crontab or other program that routinely runs it, e.g., 
+To run WatchDog in daily basis, use the crontab.
+For example, 
+- make a dictionary called `paper-watch-dog` under the $HOME/.cron directory. 
+- Then, copy the example.py to the directory. 
+- Edit crontab
 
 ```bash
 crontab -e
-0 12 * * * python3 ~/.cron/slack-rss/main.py
+0 12 * * * python3 ~/.cron/paper-watch-dog/example.py
 ```
 
 
-# How to add your favorite journals
+# How to make your watch list
 
-- You can add a journal by adding a dict object to `url_q_list` in line 24 in main.py. 
-The dict object is composed of four pairs of a key and a value as follows: 
+- The package comes with a default watch list of journals. You can customize it by your own. 
+- One can read the default watch list by
 
 ```python
-url_q_list = [
-    {
-        "journal": "journal name",
-         "url": "url for the RSS",
-         "colour": "side bar colour",
-         "thumb": "thumbnail for the journal. Set "" if you don't need it",
-    }, ....
+import PaperWatchDog as pwd 
+print(pwd.watch_list)
 ```
 
-For example,  
+- The watch list is a list of dictionaries. Each dictionary takes the following pairs of keys and values:
+    - "url": The URL for the RSS feed. 
+    - "journal": Name of journals. The name will be appeared in the slack channel.
+    - "color": Hex code. The colour will be used for decolating the post.
+    - "thumb": URL for the thumbnail. The picture will be shown with the post.
+
+The resulting dictionary looks like:
 
 ```python
-url_q_list = [
-    {
+    {   
         "journal": "arXiv (Physics Soc Ph)",
          "url": "http://export.arxiv.org/rss/physics.soc-ph",
          "colour": "#2eb886",
          "thumb": "https://pbs.twimg.com/profile_images/958432197987401728/QLeEVLC__400x400.jpg",
-    }, ....
+    },  
 ```
+
+
 
 # Reference
 - https://qiita.com/TatsuyaMizuguchi17/items/35dd3dd1396864006031
