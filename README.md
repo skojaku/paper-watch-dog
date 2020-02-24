@@ -2,7 +2,7 @@
 A Watch Dog for academic papers in your slack channles 
 ------------------------------------------------
 
-![](https://raw.githubusercontent.com/skojaku/slack-rss-bot/master/image/slack.png) 
+![](https://raw.githubusercontent.com/skojaku/paper-watach/dog/master/image/slack.png) 
 
 
 # How to use it
