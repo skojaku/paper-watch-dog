@@ -1,5 +1,5 @@
 
-A Watch Dog for academic papers in your slack channles 
+A Watch Dog for academic papers in your slack channels
 ------------------------------------------------
 
 ![](https://raw.githubusercontent.com/skojaku/paper-watch-dog/master/image/slack.png) 
