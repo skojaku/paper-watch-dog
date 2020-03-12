@@ -16,11 +16,17 @@ class Paper():
             for i in range(1,len(authors)):
                 self.author="%s, %s" % (self.author, authors[i])
         else:
-            print(paper)
-            self.author = paper.authors[0]["name"]
-            for i in range(1,len(paper.authors)):
-                self.author="%s, %s" % (self.author, paper.authors[i]["name"])
-                #self.author="%s, %s" % (self.author, authors[i])
+            print("___________")
+            if "authors" in paper:
+                if len(paper.authors[0])==0:
+                    self.author = "author unknown"
+                else:
+                    self.author = paper.authors[0]["name"]
+                    for i in range(1,len(paper.authors)):
+                        self.author="%s, %s" % (self.author, paper.authors[i]["name"])
+                        #self.author="%s, %s" % (self.author, authors[i])
+            else:
+                self.author = "author unknown"
             print(self.author)
         self.url = paper.id
         self.title = re.sub(" \(arXiv:.+\)$","",paper.title)

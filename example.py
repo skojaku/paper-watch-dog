@@ -1,6 +1,5 @@
 import PaperWatchDog as pwd 
-
-WEBHOOK_URL = "add your web hook url"
+from mywebhook import *  
 
 dog = pwd.WatchDog(WEBHOOK_URL)
 
